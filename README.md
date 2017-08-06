@@ -1,5 +1,20 @@
 # Wanghongyi
 
-I am an artist ,a performance artist
+## 01
 
-deep♂dark♂fantasy
+
+
+* 还没写
+
+* ---
+
+## 02
+
+* Ajax类的实现
+
+* 使用的之前作业的模拟服务器的js文件测试
+
+* ---
+
+* ​
+
