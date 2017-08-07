@@ -1,15 +1,25 @@
-addEventlistener("message",(arg) => {
-    let j = arg.length;
+onmessage = (arg) => {
+    
     let mid;
-    for (let i = 0; i<j-1; i++){
-        for (let k = i+1; k<j-1; k++){
-            if (arg[i] > arg[i+1]) {
+    arg = arg.data;
+    let j = arg.length;
+    console.log(j)
+    
+    for (let i = 0; i<j; i++){
+        
+        for (let k = 0; k<i; k++){
+            if (arg[i] > arg[k]) {
             mid = arg[i];
-            arg[i] = mid;
-            arg[i+1] = mid; 
+            arg[i] = arg[k];
+            arg[k] = mid; 
+            
             }
+            
         }
         
     }
     postMessage(arg);
-})
+    
+    
+    
+}

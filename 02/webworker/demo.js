@@ -5,17 +5,19 @@ let result = document.querySelector('.res');
 let i = 0;
 addbtn.onclick = function () {
     let text = document.querySelector('.input');
-    sendtext[i] = text.value;
+    sendtext[i] = parseInt(text.value);
     text.value = '';
-    console.log('1');
+    console.log(sendtext);
     i++;
 }
 calbtn.onclick = function () {
     let w = new Worker("./worker.js");
     w.postMessage(sendtext);
     w.onmessage =  (arg) => {
+        arg = arg.data;
         for ( let i = 0; i < arg.length; i++){
-            result.innerHTML(arg[i]);
+            result.innerHTML = result.innerHTML + arg[i];
+            
         }
     }
     sendtext = [];
