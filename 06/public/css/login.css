@@ -1,0 +1,179 @@
+body{
+    min-height: 900px;
+}
+.top-nav{
+    width: 980px;
+}
+.msg-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: #fff;
+}
+.nav-l ul a,.nav-r ul a{
+    color: #222;
+}
+.nav-l ul a:hover,.nav-r ul a:hover{
+    color: #00a1d6;
+}
+.top{
+    box-shadow: rgba(0,0,0,0.1) 0 1px 2px;
+}
+.blue-bg{
+    width: 100%;
+    height: 106px;
+    background: url(../image/login/blue-bg.png) repeat-x;
+
+}
+.blue-img{
+    margin: 0 auto;
+    background: url(../image/login/blue-img.png);
+    height:100%;
+    width: 980px;
+}
+.body{
+    width: 980px;
+    position: relative;
+    margin: 0 auto;
+}
+.line{
+    height: 25px;
+    border-bottom: 2px solid #ddd;
+}
+.title{
+    width: 120px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+.msg-container{
+    position: relative;
+    height: 367px;
+}
+.msg-l{
+    width: 480px;
+    float: left;
+    line-height: 1;
+    margin-top: 50px;
+    text-align: center;
+    position: relative;
+}
+.inner{
+    margin: 0 30px;
+    padding: 30px;
+    transition: 0.3s;
+}
+.msg-2Dcode{
+    width: 140px;
+    height: 140px;
+    margin: 10px auto;
+    transition: .3s;
+    
+}
+.msg-2Dcode img{
+    transition: .3s;
+}
+.inner:hover>.login-tip{
+    
+    opacity: 1;
+}
+.inner:hover>.msg-2Dcode{
+
+    opacity: 0;
+}
+.msg-2Dcode:hover{
+    
+    opacity: 0;
+}
+.code-title{
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+.code-request{
+    font-size: 14px;
+    position: relative;
+}
+.code-request a{
+    color: #00a1d6;
+    font-size: 12px;
+}
+.code-request a:hover{
+    color: #F35C8F;
+}
+.login-bg{
+    position: absolute;
+    left: -5px;
+    bottom: -40px;
+    z-index: 2;
+
+}
+.login-tip{
+    position: absolute;
+    top: 0;
+    left: 152px;
+    z-index: 2;
+    opacity: 0;
+    transition: .3s;
+
+}
+.msg-line{
+    float: left;
+    width: 1px;
+    height: 270px;
+    background-color: #ddd;
+    margin: 0 auto 0 50%;
+    position: absolute;
+    top: 30px;
+    margin-left: 490px;
+}
+.msg-r{
+    float: right;
+    position: relative;
+    margin-right: 42px;
+    margin-top: 20px;
+    width: 401px;
+}
+.login-input{
+    width: 388px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    color: #aaa;
+    font-size: 14px;
+    padding: 10px 0 10px 10px;
+    height: 18px;
+    margin: 30px 0;
+}
+.username{
+    margin-top: 80px;
+}
+.form-btn{
+    width: 184px;
+    line-height: 38px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    height: 38px;
+    border-radius: 2px;
+    margin-top: 10px;
+}
+.denglu{
+    height: 38px;
+    border: 1px solid #0381AA;
+    border-radius: 2px;
+    color: #fff;
+    background-color: #00A7DE;
+    margin-top: 10px;
+}
+.zhuce{
+    color: #555;
+    display: inline-block;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin: 10px 0 0 27px;
+
+}

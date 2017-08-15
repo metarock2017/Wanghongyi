@@ -1,0 +1,456 @@
+.index-container{
+    width: 1160px;
+    margin: 0 auto;
+}
+.viewbox{
+    padding: 0 0 10px 0;
+}
+.videoinfo{
+    padding: 5px 0 8px 0;
+    display: inline-block;
+    width: 640px;
+    position: relative;
+}
+.upinfo{
+    width: 225px;
+    margin-top: 20px;
+    float: right;
+    background: #fff;
+    padding-left: 90px;
+    position: relative;
+}
+.v-title h1{
+    height: 24px;
+    line-height: 24px;
+    text-overflow: ellipsis;
+    font-weight: normal;
+    white-space: nowrap;
+    padding: 8px 0;
+    font-size: 18px;
+    margin-left: 18px;
+}
+.v-title-info{
+    height: 28px;
+    line-height: 28px;
+    width: 100%;   
+    margin-left: 15px;
+}
+.tminfo{
+    position: relative;
+    width: 100%;
+    margin-bottom: 12px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    margin-top: 6px;
+}
+.tminfo a{
+    color: #99a2aa;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.v-title-info-msg{
+    display: inline-block;
+    width: 98px;
+    vertical-align: middle;
+    float: left;
+    position: relative;
+}
+.v-title-info-msg i{
+    width: 28px;
+    height: 28px;
+    float: left;
+    background: url(../image/icons.png) no-repeat top left;
+}
+.v-title-info-msg span{
+    padding: 0 5px;
+}
+.v-title-info div:nth-child(1) i{
+    background-position: -659px -210px;
+}
+.v-title-info div:nth-child(2) i{
+    background-position: -659px -275px;
+}
+.v-title-info div:nth-child(3) i{
+    background: url(../image/anim-coin-small.png);
+    background-position: 0px 0px;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: -20px;
+    top: -16px;
+
+}
+.v-title-info div:nth-child(4) i{
+    background: url(../image/anim-collect.png);
+    background-position: 0px 0px;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: -20px;
+    top: -16px;
+}
+.up-face{
+    width: 68px;
+    height: 68px;
+    margin: 0 10px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.up-face img{
+    width: 68px;
+    height: 68px;
+}
+.up-name a{
+    font-size: 14px;
+    color: #00a1d6;
+}
+.up-name a:hover{
+    color: #f25d8e;
+}  
+.sign{
+    margin-top: 5px;
+} 
+.sign span{
+    color: #222;
+} 
+.up-video-msg{
+    margin-bottom: 10px;
+}  
+.up-video-msg span{
+    width: 100px;
+    display: inline-block;
+    color: #99a2aa;
+    margin-top: 5px;
+
+}
+.focus{
+    height: 22px;
+    font-size: 14px;
+    line-height: 22px;
+    display: inline-block;
+    background-color: #00a1d6;
+    border: 1px solid #00a1d6;
+    transition: .2s background-color;
+    width: 138px;
+    float: left;
+    color: #fff;
+    border-radius: 4px;
+    text-align:center;
+    cursor: pointer;
+}
+.focus:hover{
+    background-color: #00b5e5;
+    border-color: #00b5e5;
+}
+.charge{
+    height: 22px;
+    font-size: 14px;
+    float: right;
+    line-height: 22px;
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 4px;
+    border-color: #f25d8e;
+    color: #f25d8e;
+    width: 68px;
+    transition: .2s;
+    text-align: center;
+    cursor: pointer;
+}
+.charge:hover{
+    background-color: #ff85ad;
+    color: #fff;
+    border-color: #ff85ad;
+}
+.ad-page{
+    height: 60px;
+    width: 100%;
+
+}
+.player-wrp{
+    border-top: 1px solid #e5e9ef;
+    border-bottom: 1px solid #e5e9ef;
+    background-color: #f6f9fa;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+.video-container{
+    width: 1160px;
+    margin: 0 auto;
+    position: relative;
+}
+.video-container video{
+    background-color: #fff;
+
+}
+.allcomment{
+    position: relative;
+    border-bottom: 1px solid #00a1d6;
+    color: #00a1d6;
+    padding: 8px 0;
+    font-size: 16px;
+}
+.comment-container{
+    width: 1160px;
+    position: relative;
+    margin: 0 auto; 
+}
+.comment-committer{
+    margin: 10px 0;
+    position: relative;
+}
+.user-face{
+    float: left;
+    margin: 7px 0 0 5px;
+    position: relative;
+}
+.user-face img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+.comment-send{
+    position: relative;
+    margin-left: 85px;
+    margin-right: 80px;
+}
+.comment-info{
+    font-size: 12px;
+    display: inline-block;
+    background-color: #f4f5f7;
+    border: 1px solid #e5e9ef;
+    border-radius: 4px;
+    color: #555;
+    width: 900px;
+    height: 65px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+.comment-sub{
+
+    height: 64px;
+    position: absolute;
+    right: -15px;
+    top: 0;
+    padding: 4px 15px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    min-width: 60px;
+    vertical-align: top;
+    cursor: pointer;
+    background-color: #00a1d6;
+    border: 1px solid #00a1d6;
+    transition: .1s;
+}
+.comment-list{
+    padding-top: 20px;
+}
+.commentter-face{
+    float: left;
+    margin: 24px 0 0 5px;
+    position: relative;
+
+}
+.commentter-face img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+.comments{
+    position: relative;
+    margin-left: 85px;
+    padding: 22px 0 14px;
+    border-top: 1px solid #e5e9ef;
+}
+.comment-name{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    padding-bottom: 4px;
+    display: block;
+    
+}
+.comment-name a{
+    color: #222;
+}
+.comment-name a:hover{
+    color: #00a1d6;
+}
+.comment-text{
+    line-height: 20px;
+    padding: 2px 0;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+.comment-msg{
+    color: #99a2aa;
+    line-height: 26px;
+    font-size: 12px;
+}
+.comment-msg span{
+    margin-right: 20px;
+}
+.introdution{
+    width: 1160px;
+    position: relative;
+    padding: 30px 0;
+    color: #6d757a;
+    line-height: 20px;
+    overflow: hidden;
+    border-bottom: 1px solid #e5e9ef;
+    border-top:1px solid #e5e9ef;
+    margin-top: 20px;
+}
+.danmu-container{
+    width: 800px;
+    height: 565px;
+    position:absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.danmu-container span{
+    position: absolute;
+    display: block;
+    width: 1000px;
+    height: 30px;
+    left: 800px;
+
+    font-weight: bold;
+
+
+}
+@keyframes danmumove{
+    0%{left: 800px;}
+    100%{left: -800px;
+        display: none;
+
+    }
+}
+.danmusender{
+    width: 800px;
+    height: 40px;
+    position: relative;
+    padding: 5px 0;
+}
+.danmusender input{
+    display: inline-block;
+    width: 480px;
+    height: 20px;
+    background-color: #fff;
+
+}
+.danmusender button{
+    display: inline-block;
+    float: right;
+    width: 90px;
+    height: 24px;
+    border-radius: 4px;
+    background-color:#00a1d6;
+    text-align: center;
+    border: 0px #000 solid;
+    color: #fff;
+    line-height:24px;
+    cursor: pointer;
+
+}
+#danmucolor{
+    width: 50px;
+    height: 24px;
+}
+#danmusize{
+    width: 40px;
+    height: 24px;
+
+}
+#danmuspeed{
+    width: 60px;
+    height: 24px;
+}
+#danmustyle{
+    width: 50px;
+    height: 24px;
+}
+.littlesize{
+    font-size: 20px;
+}
+.midsize{
+    font-size: 35px;
+}
+.largesize{
+    font-size: 50px;
+}
+.highspeed{
+    animation: danmumove 1.7s linear;
+}
+.normalspeed{
+    animation: danmumove 5s linear;
+}
+.lowspeed{
+    animation: danmumove 10s linear;
+}
+.topstyle{
+    top: 0px!important;
+    left: 370px!important;
+    animation: danmumove 0s linear!important;
+    margin: 0 auto;
+}
+.bottomstyle{
+    left: 370px!important;
+    top: 530px!important;
+    animation: danmumove 0s linear!important;
+
+}
+video{
+    object-fit: fill;
+}
+.reply{
+    padding: 10px 0;
+}
+.reply-items{
+}
+.reply-on{
+    margin-left: 34px;
+}
+.reply-items img{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    float: left;
+}
+.reply-info b{
+    margin-right: 30px;
+}
+.comment-msg a{
+    color: #222;
+}
+.replybox{
+    position: relative;
+    display: none;
+}
+.replybox-info{
+    width: 800px;
+}
+.reply-sub{
+    height: 64px;
+    right: -15px;
+    padding: 4px 15px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    min-width: 60px;
+    vertical-align: top;
+    cursor: pointer;
+    background-color: #00a1d6;
+    border: 1px solid #00a1d6;
+    transition: .1s;
+
+}

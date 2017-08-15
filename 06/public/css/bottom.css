@@ -1,0 +1,148 @@
+.foot{
+    width: 100%;
+    padding-top: 20px;
+    color: #99a2aa;
+    margin-top: 90px;
+}
+.foot-wrapper{
+    background-color: #f6f9fa;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.foot-a{
+    width: 980px;
+    height: 112px;
+    margin: 0 auto;
+}
+.postcards{
+    height: 112px;
+
+}
+.postcards li{
+    height: 112px;
+    width: 300px;
+    float: left;
+}
+.postcards li:nth-child(1){
+    padding-right: 25px;: 
+}
+.postcards li:nth-child(2){
+    padding: 0 24px 0 24px;
+    border-left: solid 1px #e5e9ef;
+    border-right: solid 1px #e5e9ef;
+}
+.postcards li:nth-child(3){
+    padding-left: 25px;
+    width: 280px;
+}
+.post-tips{
+    margin-bottom: 22px;
+}
+.cards{
+    float: left;
+    width: 100px;
+    position: relative;
+    margin-bottom: 16px;
+    color: #222;
+    font-size: 14px;
+    cursor: pointer;
+}
+.cards:hover{
+    color: #00a1d6;
+}
+.shoujiduan,.weibo,.wechat{
+    position: relative;
+    width: 82px;
+    height: 80px;
+    float: left;
+}
+.post-pic{
+    position: relative;
+    margin-left: 11px;
+    width: 60px;
+    height: 60px;
+}
+.shoujiduan .post-pic{
+    background: url(../image/icons.png) no-repeat -1024px -194px;
+}
+.shoujiduan .post-pic:hover{
+    background-position: -1090px -194px;
+}
+.weibo .post-pic{
+    background: url(../image/icons.png) no-repeat -1024px -322px;
+}
+.weibo .post-pic:hover{
+    background-position: -1090px -322px;
+}
+.wechat .post-pic{
+    background: url(../image/icons.png) no-repeat -1024px -66px;
+}
+.wechat .post-pic:hover{
+    background-position: -1090px -66px;
+}
+.post-r div em{
+    position: absolute;
+    width: 82px;
+    line-height: 14px;
+    float: left;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-size: 14px;
+    color: #222;
+}
+.post-r div:hover>em{
+    color: #00a3d5;
+}
+.qrcode-wrapper{
+    width: 130px;
+    height: 130px;
+    background: #fff;
+    margin-top: -206px;
+    right: -23px;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s;
+}
+.qrcode-box{
+    width: 128px;
+    height: 128px;
+    border: 1px solid #e5e9ef;
+}
+.qrcode-arrow{
+    width: 130px;
+    height: 141px;
+    background: url(../image/bottom/wx-arrow.png) bottom center no-repeat;
+}
+.qrcode-app{
+    background: url(../image/bottom/app-qrcode.png) center  no-repeat;
+}
+.qrcode-weibo{
+    background: url(../image/bottom/weibo-qrcode.png) center  no-repeat;
+}
+.qrcode-wechat{
+    width: 258px;
+    height: 148px;
+    background: url(../image/bottom/wx.gif)  center no-repeat;
+}
+.big-qrcode{
+    width: 260px;
+    height: 150px;
+    margin-top: -227px;
+}
+.qrcode-wechat .qrcode-arrow{
+    margin-left: 128px;
+    margin-top: 20px;
+}
+.shoujiduan:hover>.qrcode-wrapper,.weibo:hover>.qrcode-wrapper,.wechat:hover>.qrcode-wrapper{
+    opacity:1;
+    visibility:visible;
+}
+.foot-bottom{
+    width: 980px;
+    height: 80px;
+    position: relative;
+    margin: 0 auto;
+    background: url(../image/bottom/bottom.png) center no-repeat;
+}

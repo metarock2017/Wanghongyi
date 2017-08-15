@@ -1,0 +1,65 @@
+body{
+    min-height: 900px;
+}
+.top-nav{
+    width: 980px;
+}
+.reg{
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.reg-input{
+    margin: 0 auto;
+    margin-top: 40px;
+    display: block;
+    height: 20px;
+    width: 395px;
+    border-radius: 3px;
+    padding: 10px;
+    color: #a5a5a5;
+    border: 1px solid #dfdfdf;
+
+
+}
+.reg-container{
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.reg-btn{
+    width: 415px;
+    margin-top: 40px;
+    margin-left: 283px;
+    background: #f9f9f9;
+    border: 1px solid #dfdfdf;
+    color: #a5a5a5;
+    line-height: 38px;
+    font-size: 14px;
+    text-align: center;
+    height: 38px;
+    border-radius: 2px;
+}
+.reg-btn-checked{
+    background: #00a0da;
+    color: #fff;
+    cursor: pointer;
+}
+.agree{
+    color: #717171;
+    margin: 0 auto;
+    width: 415px;
+    display: block;
+}
+.agree a,.haveid a{
+    color: #35a3d6;
+}
+.agree a:hover,.haveid a:hover{
+    color: #F35C8F;
+}
+.haveid a{
+    float: right;
+    margin-right: 290px;
+    margin-top: 20px;
+}
+.haveid{
+    height: 56px;
+}
