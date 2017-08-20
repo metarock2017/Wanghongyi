@@ -47,11 +47,13 @@ window.onload = function() {
 
         if (parseInt(ball.style.left) < 0 || parseInt(ball.style.left) > (parseInt(mainbox.style.width) - ball.offsetWidth)) {
             ball.speedX = -ball.speedX;
+            ball.style.background = RandomColor()
 
 
         }
         if (parseInt(ball.style.top) < 0 || parseInt(ball.style.top) > parseInt(mainbox.style.height) - ball.offsetHeight) {
             ball.speedY = -ball.speedY;
+            ball.style.background = RandomColor()
         }
 
         ball.style.left = parseInt(ball.style.left) + ball.speedX + 'px';
