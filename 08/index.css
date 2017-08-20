@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    overflow: hidden;
+}
+.mainbox{
+    overflow: hidden;
+}
+.ball{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+}
