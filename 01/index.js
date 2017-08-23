@@ -1,5 +1,7 @@
-var canvas = document.querySelector('canvas');
+var canvas = document.querySelector('.main');
+var canvasOfScore = document.querySelector('.scoreboard');
 var ctx = canvas.getContext('2d');
+var ctxScore = canvasOfScore.getContext('2d');
 var mytank = new Mytank();
 var keysDown = {};
 var w = window;
@@ -8,38 +10,55 @@ var score = 0;
 var before = Date.now();
 var bullets = [];
 var enemytanks = [];
-var startTime; 
+var startTime;
+var Interval;
+var start = false,
+    end = false,
+    won;
+
 
 requestAnimationFrame = w.requestAnimationFrame || w.webkitRequestAnimationFrame || w.msRequestAnimationFrame || w.mozRequestAnimationFrame;
-
+ctxScore.font = "50px 微软雅黑";
+ctx.font = "40px 微软雅黑";
+ctx.fillStyle = "#ffffff";
+ctxScore.fillStyle = "#ffffff";
 //重启游戏
 function ReStart() {
     var change,
         gap = 2000;
+    score = 0;
+    mytank.health = 20;
+    bullets = [];
+    enemytanks = [];
+    if (typeof Interval != undefined) {
+        clearInterval(Interval);
+    }
     startTime = Date.now();
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     mytank.bg.onload = function() {
-        ctx.drawImage(mytank.bg, mytank.x, mytank.y)
+        ctx.drawImage(mytank.bg, canvas.width / 2 - 25, canvas.width / 2 - 25)
     }
-    setInterval(function() {
+
+    Interval =  setInterval(function() {
         var type,
             random = Math.random();
-        change = (Date.now() - startTime)/60000;
+        change = (Date.now() - startTime) / 60000;
 
-        if (change>1) {
+        if (change > 1) {
             change = 1;
         }
-        gap = Math.floor(2000/(1+change));
-        console.log(gap)
-        if (random <0.2) {
+        gap = Math.floor(2000 / (1 + change));
+
+        if (random < 0.2) {
             type = "HeavyTank";
-        }else if (random >0.5){
+        } else if (random > 0.5) {
             type = "MediumTank";
-        }else {
+        } else {
             type = "LightTank"
         }
         CreateEnemy(type);
     }, gap)
+    
 
 }
 //敌军坦克数据
@@ -90,7 +109,7 @@ function EnemyTank() {
 }
 //玩家坦克数据
 function Mytank() {
-    this.health = 2;
+    this.health = 20;
     this.speed = 200;
     this.bullet = "APCR";
     this.shoted = false;
@@ -115,7 +134,7 @@ function Bullet() {
         display: 1
     }
     this.HE = {
-        damage: 1,
+        damage: 2,
         speed: 150,
         bg: new Image(),
         src: "./HE.png",
@@ -191,9 +210,9 @@ function CreateEnemy(type) {
     var newenemy;
     if (type == "MediumTank") {
         newenemy = new EnemyTank().MediumTank;
-    }else if (type == "HeavyTank") {
+    } else if (type == "HeavyTank") {
         newenemy = new EnemyTank().HeavyTank;
-    }else if (type == "LightTank") {
+    } else if (type == "LightTank") {
         newenemy = new EnemyTank().LightTank;
     }
     newenemy.x = Math.random() * 750;
@@ -202,8 +221,20 @@ function CreateEnemy(type) {
     //     CreateBullet(newenemy)
     // }, 1000 / newenemy.shotspeed)
     enemytanks.push(newenemy);
-    console.log(enemytanks)
+
 }
+//监听点击
+addEventListener('click', function() {
+
+    if (!start && !end) {
+        start = true;
+        ReStart();
+    }
+    if (start && end) {
+        end = false;
+        ReStart();
+    }
+})
 //监听用户输入
 function ListenKeyDown() {
 
@@ -385,7 +416,7 @@ function UpDateTanks(modifier) {
 
     }
 }
-//碰撞检测
+//碰撞检测及血量计算
 function IsTrade() {
     var distancex,
         distancey,
@@ -401,6 +432,7 @@ function IsTrade() {
             if (distance < 25) {
                 bullets[i].display = 0;
                 mytank.health -= bullets[i].damage;
+                bullets.splice(i, 1);
             }
             for (var j = enemytanks.length - 1; j >= 0; j--) {
 
@@ -413,6 +445,11 @@ function IsTrade() {
                         bullets.splice(i, 1);
 
                         if (enemytanks[j].health <= 0) {
+                            if (enemytanks[j].type = "h") {
+                                score += 2;
+                            }else{
+                            score++; 
+                            }
                             enemytanks.splice(j, 1);
 
                         }
@@ -441,20 +478,73 @@ function ReDraw() {
 
     }
 }
+//绘制分数
+function DrawScore() {
+    ctxScore.clearRect(0, 0, canvasOfScore.width, canvasOfScore.height);
+    ctxScore.fillText("SCORE:" + score, 0, 50)
+    ctxScore.fillText("YOUR HEALTH:" + mytank.health, 300, 50)
+
+}
+//开始界面
+function DrawStart() {
+    var startimg = new Image();
+    startimg.src = "./start.png"
+    startimg.onload = function() {
+        ctx.drawImage(startimg, 130, 200);
+    }
+
+}
+//失败界面
+function DrawFailed() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillText("Your Are Destoryed, Click To Rise!", 90, 350)
+}
+//成功界面
+function DrawWon() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillText("WINNER WINNER, CHICKEN DINNER!", 50, 350)
+}
+//判断游戏情况
+function HowTheGame() {
+    if (mytank.health <= 0) {
+        end = true;
+        won = false;
+    }
+    if (score >= 100) {
+        end = true;
+        won = true;
+    }
+}
 //主循环
 function MainLoop() {
     var now = Date.now();
     var gap = (now - before) / 1000;
-    UpDate(gap);
-    UpDateBullets(gap);
-    UpDateTanks(gap);
-    IsTrade();
+    HowTheGame();
+    if (start && !end) {
 
-    ReDraw();
+        UpDate(gap);
+        UpDateBullets(gap);
+        UpDateTanks(gap);
+        IsTrade();
+        ReDraw();
+
+        before = now;
+    }
+    if (!start && !end) {
+        DrawStart();
+    }
+    if (start && end) {
+        if (won) {
+            DrawWon();
+        } else {
+            DrawFailed();
+        }
+    }
+    DrawScore();
     requestAnimationFrame(MainLoop);
-    before = now;
+
 }
 
-ReStart();
+
 ListenKeyDown();
 MainLoop();
